@@ -1,0 +1,4 @@
+<!ELEMENT Modulo (titulo, contenido)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT contenido (RA)>
+<!ELEMENT RA (#PCDATA)>

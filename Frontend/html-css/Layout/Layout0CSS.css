@@ -1,0 +1,27 @@
+#contenedor { 
+    width: 800px;
+}
+
+#cabecera {
+    color: #fff;
+    background-color: #000;
+
+}
+
+#menu {
+    background-color:#999;
+    float: left;
+    width: 180px;
+
+}
+
+#contenido {
+    background-color: #ddd;
+    float: left;
+}
+
+#pie {
+    background-color: #bbb;
+    clear: both; /*desactivo float:left*/
+    text-align: center;
+}

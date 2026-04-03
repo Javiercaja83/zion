@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="public" id="fb740f40-8e13-47aa-923b-09fe051d34aa" name="Changes" comment="25-09-2025">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IDEs/IntelliJ IDEA 2025.2.2.lnk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IDEs/netbeans.lnk" beforeDir="false" afterPath="$PROJECT_DIR$/IDEs/netbeans.lnk" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="public" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="33C5r1F7YYkcVtJkHO95rwIIUyU" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="public" />
+    <option name="showLibraryContents" value="public" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;public&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;public&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;public&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Java&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;public&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;public&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/javie/Desktop/DAW&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;public&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;public&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;public&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;public&quot;
+  }
+}</component>
+  <component name="TaskManager">
+    <task active="public" id="Default" summary="Default task">
+      <changelist id="fb740f40-8e13-47aa-923b-09fe051d34aa" name="Changes" comment="" />
+      <created>1758808409678</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1758808409678</updated>
+      <workItem from="1758808423923" duration="80000" />
+      <workItem from="1758808742857" duration="2435000" />
+      <workItem from="1758901252179" duration="656000" />
+      <workItem from="1759310994575" duration="597000" />
+    </task>
+    <task id="LOCAL-00001" summary="25-09-2025">
+      <option name="closed" value="public" />
+      <created>1758808895507</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1758808895507</updated>
+    </task>
+    <task id="LOCAL-00002" summary="25-09-2025">
+      <option name="closed" value="public" />
+      <created>1758810307678</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1758810307678</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="25-09-2025" />
+    <option name="LAST_COMMIT_MESSAGE" value="25-09-2025" />
+  </component>
+</project>

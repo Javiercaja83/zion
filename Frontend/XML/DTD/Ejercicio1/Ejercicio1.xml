@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TEXTOS [
+<!ELEMENT TEXTOS (TEXTO*)>
+<!ELEMENT TEXTO (#PCDATA)>
+<!ENTITY ESCRITOR "LEOPOLDO ALAS CLARIN">
+<!ENTITY OBRA "LA REGENTA">
+<!ENTITY FECHA "25/04/1852">
+]>
+<TEXTOS>
+    <TEXTO>
+        &ESCRITOR; escribió &OBRA; que nació el &FECHA;.
+    </TEXTO>
+</TEXTOS>
+    

@@ -1,0 +1,4 @@
+{
+    "java.debug.settings.onBuildFailureProceed": public,
+    "java.compile.nullAnalysis.mode": "automatic"
+}

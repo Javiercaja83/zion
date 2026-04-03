@@ -1,0 +1,29 @@
+header { 
+    background-color: #000;
+    color: white;
+}
+#section {
+    display: flex; /*el contenedor va ha ser flexible*/
+}
+nav {
+    flex: 1; /* flex:grow=1 factor crecimiento del nav*/
+    width: 30%;
+    height: 300px;
+}
+nav ul {
+    list-style-type: none; /*hiperenlaces sin puntos*/
+}
+article {
+    flex: 3;/*flex:grow = 3, triple grande del nav*/
+    background-color: pink;
+    width: 70%;
+}
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+footer {
+    background-color: #345;
+    color: red;
+}

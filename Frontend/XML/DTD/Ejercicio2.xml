@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <?xml-model href="file.dtd" type="application/xml-dtd"?>
+   <Modulo>
+        <titulo>Programacion</titulo>
+        <contenido>
+            <RA>Colecciones</RA>
+        </contenido>
+   </Modulo>

@@ -1,0 +1,28 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "EjerciciosCodewars",
+            "request": "launch",
+            "mainClass": "EjerciciosCodewars",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${fileBasenameNoExtension}",
+            "projectName": "${workspaceFolderBasename}",
+            "console": "integratedTerminal",
+            "preLaunchTask": "javac: Compile current file"
+        }
+    ]
+}

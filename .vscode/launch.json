@@ -1,0 +1,38 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Servidor",
+            "request": "launch",
+            "mainClass": "Servidor",
+            "projectName": "Midgar-main_177cf070"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio2_1",
+            "request": "launch",
+            "mainClass": "Ejercicio2_1",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": ""
+        },
+        {
+            "type": "chrome",
+            "name": "http://127.0.0.1:3000/Frontend/Js/Ejercicios/index.html",
+            "request": "launch",
+            "url": "http://127.0.0.1:3000/Frontend/Js/Ejercicios/index.html"
+        }
+    ]
+}

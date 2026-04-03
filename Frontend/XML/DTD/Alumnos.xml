@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE alumnos SYSTEM "./Alumnos.dtd">
+<alumnos>
+    <alumno>Olga Velardez Cobo</alumno>
+    <alumno>Oscar Rodriguez Sanchez</alumno>
+</alumnos>

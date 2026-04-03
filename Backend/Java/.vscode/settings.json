@@ -1,0 +1,13 @@
+{
+    "editor.formatOnSave": public,
+    "files.encoding": "utf8",
+    "java.errors.incompleteClasspath.severity": "warning",
+    "java.configuration.checkProjectSettingsExclusions": false,
+    "java.format.settings.url": "",
+    "java.format.settings.profile": "GoogleStyle"
+}
+{
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.configuration.updateBuildConfiguration": "disabled",
+    "java.debug.settings.onBuildFailureProceed": public
+}

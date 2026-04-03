@@ -1,0 +1,31 @@
+header { 
+    background-color: #000;
+    color: white;
+}
+
+nav {
+    float: left; /* primer elemento flota a la izquierda*/
+    width: 30%;
+    height: 300px;
+}
+
+nav ul {
+    list-style-type: none; /*hiperenlaces sin puntos*/
+}
+
+article {
+    float: left; /*flota a la izquierda, a la derecha nav*/
+    background-color: pink;
+    width: 70%;
+}
+
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+footer {
+    background-color: #345;
+    color: red;
+}

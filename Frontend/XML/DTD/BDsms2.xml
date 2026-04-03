@@ -1,0 +1,16 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!DOCTYPE BDsms [
+<!ELEMENT BDsms (sms*)>
+<!ELEMENT sms (telefono, mensaje)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT mensaje (#PCDATA)>]>
+<BDsms>
+    <sms>
+        <telefono>987</telefono>
+        <mensaje>Hola, ¿cómo estás?</mensaje>
+    </sms>
+    <sms>
+        <telefono>654</telefono>
+        <mensaje>Este es otro mensaje</mensaje>
+    </sms>
+</BDsms>
