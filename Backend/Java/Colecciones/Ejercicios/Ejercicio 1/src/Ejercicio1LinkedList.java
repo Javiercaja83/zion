@@ -14,7 +14,12 @@ public class Ejercicio1LinkedList {
             System.out.println(string);
         }
         Iterator<String> iterator = listaNombres.iterator();
-
+        //Un itenador es un objeto que nos permite recorrer una colección de elementos, como una lista, sin exponer su estructura interna.
+        while (iterator.hasNext()) {
+            String nombre = iterator.next();
+            System.out.println(nombre);
+        }
+        
         System.out.println(listaNombres); // Ejemplo de uso
     }
 }
