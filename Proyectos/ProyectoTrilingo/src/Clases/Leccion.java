@@ -11,7 +11,7 @@ public class Leccion {
         this.pregunta = pregunta;
         this.respuestaCorrecta = respuestaCorrecta;
         this.puntos = puntos;
-
+        
     }
 
     public String getPregunta() {

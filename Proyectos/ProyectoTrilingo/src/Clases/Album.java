@@ -102,18 +102,22 @@ public class Album {
         if (lecciones == null || lecciones.isEmpty()) {
             System.out.println("No hay lecciones pendientes para este álbum.");
             return;
-        }
-
-        while (!lecciones.isEmpty()) {
+        }else{
+            do {
+                
             Leccion leccion = lecciones.poll();
             System.out.println("Pregunta: " + leccion.getPregunta());
             String respuestaUsuario = scanner.nextLine();
-
             if (respuestaUsuario.equalsIgnoreCase(leccion.getRespuestaCorrecta())) {
-                System.out.println("¡Respuesta correcta! Has ganado " + leccion.getPuntos() + " puntos.");
+            System.out.println("RESPUESTA CORRECTA! Has ganado " + leccion.getPuntos() + " puntos.");    
             } else {
-                System.out.println("Respuesta incorrecta. La respuesta correcta es: " + leccion.getRespuestaCorrecta());
+                System.out.println(" RESPUESTA INCORRECTA! La respuesta correcta es: " + leccion.getRespuestaCorrecta());
             }
+            } while (!lecciones.isEmpty());
+            
+
         }
+
+
     }
 }

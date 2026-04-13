@@ -67,5 +67,18 @@ public class Usuario {
         ultimaDiaActivo = fechaActual; // Actualizar el último día activo
     }
 
+    public boolean esNuevoDia(LocalDate fechaActual) {
+        boolean esNuevoDia = ultimaDiaActivo == null || !ultimaDiaActivo.equals(fechaActual);
+        return esNuevoDia;
+    }
+
+    public void marcarAlbumComoEscuchado(Album albumEscuchado) {
+        if (albumEscuchado == null || albumEscuchado.isEscuchado()) {
+            System.out.println("❌ Álbum no encontrado o ya marcado como escuchado.");
+        } else {
+            albumEscuchado.setEscuchado(true);
+            System.out.println("✅ Álbum marcado como escuchado.");
+        }
+    }
     
 }
