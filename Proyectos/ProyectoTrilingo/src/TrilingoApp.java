@@ -25,7 +25,8 @@ public class TrilingoApp {
                         "2. Ver biblioteca de álbumes\n" + //
                         "3. Marcar álbum como escuchado\n" + //
                         "4. Reiniciar racha (para pruebas)\n" + //
-                        "5. Salir\n" + //
+                        "5. Ver detalles de un álbum\n" + //
+                        "6. Salir\n" + //
                         "=====================================\n" + //
                         "Elige una opción: ");
                         try {
@@ -48,10 +49,14 @@ public class TrilingoApp {
                                 reiniciarRacha(usuario);
                                 break;
                             case 5:
+                                verDetallesAlbum(biblioteca);
+                                break;
+                            case 6: 
                                 System.out.println("¡Gracias por usar MusicDuolingo! ¡Hasta luego!");
                                 return; // Salir del programa
-                            default:
-                                System.out.println("Opción inválida. Por favor, ingresa un número del 1 al 5.");
+                            
+                                default:
+                                System.out.println("Opción inválida. Por favor, ingresa un número del 1 al 6.");
                         }
         } while (true);
 
@@ -94,5 +99,17 @@ public class TrilingoApp {
         System.out.println("Racha reiniciada para pruebas.");
 
     }
-    
+
+    public static void verDetallesAlbum(Biblioteca biblioteca) {
+        System.out.println("mostrando albumes que no estan marcados como escuchados:");
+        for (Album album : biblioteca.getAlbums()) {
+            if (!album.isEscuchado()) {
+                if (album.tieneLeccionesPendientes()) {
+                    System.out.println("¡Tienes lecciones pendientes para este álbum!");
+                    album.hacerLecciones(scanner);
+                }
+                System.out.println(album);
+            }
+        }
+    }
 }
