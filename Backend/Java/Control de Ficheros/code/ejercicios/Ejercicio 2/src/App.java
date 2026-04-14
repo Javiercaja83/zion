@@ -1,4 +1,4 @@
-import java.io.FileInputStream;
+import java.io.BufferedOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -7,31 +7,28 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
+import clases.GestorGastos;
+import clases.Usuario;
+
 public class App {
     public static void main(String[] args) {
-        try (Scanner scanner = new Scanner(System.in)) {
-            System.out.println("Introduzca texto por favor:");
-            String texto = scanner.nextLine();
-
-            Path archivo = Paths.get("src", "usuarios.txt");
-            Files.createDirectories(archivo.getParent());
-
-            try (FileOutputStream fos = new FileOutputStream(archivo.toFile())) {
-                fos.write(texto.getBytes(StandardCharsets.UTF_8));
-            }
-
-            System.out.println("Archivo guardado en: " + archivo.toAbsolutePath());
-            System.out.println("Leyendo el archivo con FileInputStream...");
-
-            try (FileInputStream fis = new FileInputStream(archivo.toFile())) {
-                byte[] buffer = new byte[1024];
-                int bytesLeidos;
-                while ((bytesLeidos = fis.read(buffer)) != -1) {
-                    System.out.print(new String(buffer, 0, bytesLeidos, StandardCharsets.UTF_8));
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduce el nombre del usuario:");
+        String nombre = scanner.nextLine();
+        System.out.println("introduce el email del usuario:");
+        String email = scanner.nextLine();
+        System.out.println("Introduce la edad del usuario:");
+        int edad =scanner.nextInt();
+        Usuario usuario = new Usuario(nombre, email, edad);
+  
+        GestorGastos gestorGastos = new GestorGastos();
+        gestorGastos.crearUsuario(usuario);
+        gestorGastos.leerUsuarios();
     }
 }
+/*
+3. En `App.java`, pide al usuario por consola el nombre, el email y la edad.
+   - Crea un objeto `Usuario` con esos datos.
+   - Usa `GestorUsuarios` para escribir el usuario en el fichero.
+   - Después, lee el fichero y muestra todos los usuarios en consola.
+*/
