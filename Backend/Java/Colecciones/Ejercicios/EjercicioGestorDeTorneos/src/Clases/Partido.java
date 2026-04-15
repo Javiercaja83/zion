@@ -1,59 +1,47 @@
 package Clases;
-
 import java.time.LocalDateTime;
 
 public class Partido {
     private Equipo equipoLocal;
-    private Equipo equipoVistante;
-    private Estadio estadio;
-    private LocalDateTime fechaHora;
-    private int marcadorLocal;
-    private int marcadorVisitante;
-    private String marcadorPartido;
-
-    public Equipo getEquipoLocal() {
-        return equipoLocal;
+    private Equipo equipoVisitante;
+    private int golesLocal;
+    private int golesVisitante;
+    private LocalDateTime fechaPartido;
+    private Estadio estadioPartido;
+    private String resultado;
+    public Partido(Equipo equipoLocal, Equipo equipoVisitante, LocalDateTime fechaPartido, Estadio estadioPartido,
+            String resultado) {
+        this.equipoLocal = equipoLocal;
+        this.equipoVisitante = equipoVisitante;
+        this.fechaPartido = fechaPartido;
+        this.estadioPartido = estadioPartido;
+        this.resultado = resultado;
     }
 
-// Constructor más práctico para crear partidos antes de jugarlos
-public Partido(Equipo equipoLocal, Equipo equipoVisitante, 
-               Estadio estadio, LocalDateTime fechaHora) {
     
-    this.equipoLocal = equipoLocal;
-    this.equipoVistante = equipoVisitante;
-    this.estadio = estadio;
-    this.fechaHora = fechaHora;
-    this.marcadorLocal = 0;
-    this.marcadorVisitante = 0;
-    this.marcadorPartido = "0 - 0";
-}
-    public void setMarcadorLocal(int marcadorLocal) {
-    this.marcadorLocal = marcadorLocal;
-    this.marcadorPartido = marcadorLocal + " - " + marcadorVisitante; // Actualiza el string
-}
-
-public void setMarcadorVisitante(int marcadorVisitante) {
-    this.marcadorVisitante = marcadorVisitante;
-    this.marcadorPartido = marcadorLocal + " - " + marcadorVisitante; // Actualiza el string
-}
-
-public int getMarcadorLocal() {
-    return marcadorLocal;
-}
-
-public int getMarcadorVisitante() {
-    return marcadorVisitante;
-}
-
-// Método para obtener el ganador (equipo con más goles)
-public Equipo getGanador() {
-    if (marcadorLocal > marcadorVisitante) {
-        return equipoLocal;
-    } else if (marcadorVisitante > marcadorLocal) {
-        return equipoVistante;
-    } else {
-        // Empate: desempate aleatorio (como propusiste)
-        return Math.random() > 0.5 ? equipoLocal : equipoVistante;
+    public String actualizarResultado() {
+        String resultado = golesLocal + " - " + golesVisitante;
+        return resultado;
     }
-}
+
+    public Equipo simularPartido(Equipo equipoLocal, Equipo equipoVistante, int golesLocal, int golesVisitante, int resultado, Estadio estadioPartido, LocalDateTime fechaYhoraPartido) {
+        //TODO: imprimir equipos que juegan, 
+        // asignar goles aleatoriamente a ambos, comparar goles, seleccionar al ganador, hacer copia y devolverla.
+        Equipo equipoGanador;
+        System.out.println(equipoLocal.getNombre() +  " - " + equipoVistante + "JUGARAN EN EL " + estadioPartido.getNombre() + " EL DIA Y HORA " +  fechaYhoraPartido);
+        for (int i = 0; i < 5; i++) {
+            if (Math.random() > 0.48) {
+                golesLocal++;
+            } else {
+                golesVisitante++;
+            }
+        }
+        if (golesLocal > golesVisitante) {
+            equipoGanador = equipoLocal;
+        }else {
+            equipoGanador = equipoVistante;
+        }
+        return equipoGanador;
+    }
+
 }
