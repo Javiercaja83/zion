@@ -1,47 +1,48 @@
-# Ejercicio 2 - Control de ficheros con objetos
+## Getting Started
 
-## Enunciado
+Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
 
-Crea una pequeña aplicación Java orientada a objetos que gestione información de usuarios y guarde los datos en un fichero de texto.
+## Folder Structure
+
+The workspace contains two folders by default, where:
+
+- `src`: the folder to maintain sources
+- `lib`: the folder to maintain dependencies
+
+Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+
+> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+
+## Dependency Management
+
+The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+
+## Ejercicio: lectura y escritura de archivos con BufferedReader / BufferedWriter
+
+Crea un programa Java que:
+
+1. Pida al usuario el nombre de un archivo de texto de entrada y otro de salida.
+2. Abra el archivo de entrada y lea su contenido línea por línea usando `BufferedReader`.
+3. Para cada línea leída:
+   - conviértela a mayúsculas,
+   - elimina espacios en blanco al inicio y al final,
+   - escribe la línea resultante en el archivo de salida usando `BufferedWriter`.
+4. Al finalizar, muestra en consola:
+   - cuántas líneas se han leído,
+   - cuántas líneas se han escrito,
+   - y el nombre del archivo de salida.
 
 ### Requisitos
 
-1. Define una clase `Usuario` con al menos estos atributos:
-   - `String nombre`
-   - `String email`
-   - `int edad`
+- Usa `BufferedReader` para leer el archivo de entrada.
+- Usa `BufferedWriter` para escribir en el archivo de salida.
+- Maneja posibles excepciones de E/S con `try-with-resources`.
+- No uses bibliotecas externas; usa solo la API estándar de Java.
 
-2. Define una clase `GestorUsuarios` que tenga las siguientes responsabilidades:
-   - crear un fichero dentro de `src` (por ejemplo, `usuarios.txt`)
-   - guardar uno o varios usuarios en el fichero
-   - leer el fichero y mostrar por consola los usuarios cargados
+### Extensión opcional
 
-3. En `App.java`, pide al usuario por consola el nombre, el email y la edad.
-   - Crea un objeto `Usuario` con esos datos.
-   - Usa `GestorUsuarios` para escribir el usuario en el fichero.
-   - Después, lee el fichero y muestra todos los usuarios en consola.
+Puedes mejorar el programa para que también:
 
-### Detalles adicionales
-
-- El fichero debe guardarse en la carpeta `src` del proyecto.
-- Usa `Path`, `Files`, `BufferedReader` y `BufferedWriter` para trabajar con el fichero.
-- Formatea la salida de cada usuario como:
-  - `Nombre: <nombre>, Email: <email>, Edad: <edad>`
-
-### Ejemplo de flujo
-
-1. Ejecutar el programa.
-2. El programa pregunta:
-   - `Introduce el nombre:`
-   - `Introduce el email:`
-   - `Introduce la edad:`
-3. El programa guarda el usuario en `src/usuarios.txt`.
-4. El programa lee el fichero y muestra todos los usuarios.
-
-### Sugerencia de estructura
-
-- `src/Usuario.java`
-- `src/GestorUsuarios.java`
-- `src/App.java`
-
-> Este ejercicio comienza a meter objetos y separar responsabilidades: la clase `Usuario` representa los datos, y la clase `GestorUsuarios` se encarga del acceso al fichero.
+- ignore líneas vacías,
+- cuente cuántas palabras totales se han procesado,
+- o copie solo las líneas que contengan un texto específico.

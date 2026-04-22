@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ClasesPrincipales",
+            "request": "launch",
+            "mainClass": "ClasesPrincipales",
+            "projectName": "zion_2254ffd4"
+        },
+        {
+            "type": "java",
             "name": "AppPartido",
             "request": "launch",
             "mainClass": "AppPartido",

@@ -1,11 +1,14 @@
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.EOFException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 
 public class ClasesPrincipales {
     public static void main(String[] args) {
@@ -130,5 +133,48 @@ public class ClasesPrincipales {
             }
             System.out.println();
         }
+    }
+
+    public static void EscribirObjetoSerializable() {
+        String nombreFichero = "persona.dat";
+
+        try (FileOutputStream fos = new FileOutputStream(nombreFichero);
+             ObjectOutputStream oos = new ObjectOutputStream(fos)){
+            
+            // Creamos varios objetos
+            PersonaSerializable persona1 = new PersonaSerializable("Ana", 25, "Madrid");
+            PersonaSerializable p2 = new PersonaSerializable("Luis", 30, "Barcelona");  
+            PersonaSerializable p3 = new PersonaSerializable("Marta", 28, "Valencia");  
+
+            // Escribimmos los objetos en el fichero
+            oos.writeObject(persona1);
+            oos.writeObject(p2);
+            oos.writeObject(p3);
+
+            System.out.println("Objetos escritos en el ficher correctamente.");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+   public static void crearObjetosSerializable() {
+        String fichero = "persona.dat";
+        try (FileInputStream fis = new FileInputStream(fichero);
+             ObjectInputStream ois = new ObjectInputStream(fis)){
+            
+            while (true) { 
+                try {
+                    PersonaSerializable p = (PersonaSerializable) ois.readObject();
+                    System.out.println("Persona leída: " + p.getNombre() + ", Edad: " + p.getEdad() + ", Ciudad: " + p.getCiudad());
+                } catch (EOFException e) {
+                    System.out.println("Fin del archivo.");
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
     }
 }
